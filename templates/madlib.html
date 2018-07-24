@@ -4,8 +4,17 @@
   <title>A madlib</title>
 </head>
 <body>
-   There once was a {{ option }} {{ noun }} sitting in the Hackbright Lab.
+
+There once was a {{ option }} 
+{% for noun in nouns %} 
+{%if not loop.last and not loop.first%}
+{{ noun }}, 
+{% elif loop.last %}
+and {{noun}}  
+{% endif %}
+{%endfor%} sitting in the Hackbright Lab.
 When {{ name }} went to pick it up, it burst into flames in a totally
 {{ adjective }} way.
+
 </body>
 </html>

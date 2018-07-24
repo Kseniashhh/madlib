@@ -7,7 +7,7 @@
     Hope you are ready for some thrills {{ person }}!
     <form action="/madlib">
     	Do you want to use any other names? If yes, just enter a new one: <br>
-    	<input type="text" name="name" value="First name"><br>
+    	<input type="text" name="name"><br>
     	Choose a color
     	<select name="option">
     		<option value=" " selected> Select a color</option>
@@ -18,8 +18,12 @@
     		<option value="lilac">lilac</option>
     	</select>
     	<br>
-    	Enter any noun:
-    	<input type="text" name="noun"><br>
+    	Select any noun and you can choose more than one:<br>
+    	<input type="checkbox" name="list_noun" value="donut"> Donut<br>
+    	<input type="checkbox" name="list_noun" value="pizza"> Pizza<br>
+    	<input type="checkbox" name="list_noun" value="rain"> Rain<br>
+    	<input type="checkbox" name="list_noun" value="ocean"> Ocean<br>
+    	<input type="checkbox" name="list_noun" value="book"> Book<br>
     	Enter any adjective:
     	<input type="text" name="adjective"><br>
     	<input type="submit" value="Submit">
